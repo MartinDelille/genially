@@ -3,3 +3,10 @@ node_js:
 - stable
 script:
 - yarn dist
+deploy:
+  provider: releases
+  api_key:
+    secure: oKlaZyBwgsETtekjaI0L//Pf2MpMQOhD0LmZp/e9oUiJfMS5qAAEtPXcja9EN0HDFVLK3IP/1l+jpqldRYhIDHT8Zem3REonKfYXK6MZkrwvgOamkB2Z90CTzur3wsBmmye+O7K695y+BVReSm0DEk63JxpIjjSiOYdm+Ima3PZ2sG53g4ylL8Di2MneLH7BZBPV2VzlmjDehLX096bf6PivDLMKdcLJQZ8lX20v00ABD9yz6PDRbX8RdeCNBjilDtp/SU2vi5BYXcTaKL4mdxc3furMgGJhdSg0Y4PzihO5HeiNiCtfwuWx7w8fFApfxU/O0eb69EINcT+EfowoOv3iN3ZQPyobgKI7ociu2QDuIdKhSfPHVRD+Vze0XyENUlatHmQO2m2GkfKgodo6SUJNKtnRAbAsjzYex2Lf6qHhbLdteny0SpRKD3KhoJWccGN6pG2PM4ZTJ6KVPhX9O1eguCSGvr8Ekn2+xaeLSVeH38ZKT8UjUTHV2L7+Xm91d6zpwdXI5C4eh3Wzxbm3XkPC9tB6iwkJsf+VqHxDVjpFz/uBN7W7Z9W1oX7sNaJXvz13XlEqu6x6FeoTHz5sOc7XAUm73EdquS5h+1vmITk0xDtfMjXATHXTiuIkAcGKRnvviOgim9o0vk1gH3RAyHjIusf4gJlAyQQFR5Q2c/k=
+  file: dist/engagement_pour_la_france-1.0.0.dmg
+  on:
+    tags: true
