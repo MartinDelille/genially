@@ -230,7 +230,7 @@
       return (
         'symbol' === e ||
         'Symbol' === t['@@toStringTag'] ||
-        ('function' === typeof Symbol && t instanceof Symbol)
+          ('function' === typeof Symbol && t instanceof Symbol)
       );
     }
     function o(e) {
@@ -1292,8 +1292,7 @@
       return (
         ('undefined' === typeof navigator ||
           'ReactNative' !== navigator.product) &&
-        'undefined' !== typeof window &&
-        'undefined' !== typeof document
+        'undefined' !== typeof window && 'undefined' !== typeof document
       );
     }
     function b(e, t) {
@@ -11881,8 +11880,7 @@
           -1 === e.indexOf('Mobile Safari') ||
           -1 !== e.indexOf('Chrome') ||
           -1 !== e.indexOf('Windows Phone')) &&
-        window.history &&
-        'pushState' in window.history
+        window.history && 'pushState' in window.history
       );
     }
     function m() {
@@ -23520,14 +23518,18 @@
               this.tooltip.options.stem &&
                 t.find('.tpd-stem').attr('data-stem-position', e);
             var n = Math.max(this._css.radius - this._css.border, 0);
-            t.find('.tpd-background-title').css({
-              'border-top-left-radius': n,
-              'border-top-right-radius': n
-            }),
-              t.find('.tpd-background-content').css({
-                'border-bottom-left-radius': n,
-                'border-bottom-right-radius': n
+            t
+              .find('.tpd-background-title')
+              .css({
+                'border-top-left-radius': n,
+                'border-top-right-radius': n
               }),
+              t
+                .find('.tpd-background-content')
+                .css({
+                  'border-bottom-left-radius': n,
+                  'border-bottom-right-radius': n
+                }),
               t.find('.tpd-background-loading').css({ 'border-radius': n });
             var i = { backgroundColor: this._css.borderColor };
             return (
@@ -23636,10 +23638,12 @@
               var e = this._vars.frames[this._side],
                 t = $.extend({}, e.background.dimensions);
               this.element.find('.tpd-background').css(t),
-                this.element.find('.tpd-background-shadow').css({
-                  width: t.width + 2 * this._css.border,
-                  height: t.height + 2 * this._css.border
-                }),
+                this.element
+                  .find('.tpd-background-shadow')
+                  .css({
+                    width: t.width + 2 * this._css.border,
+                    height: t.height + 2 * this._css.border
+                  }),
                 this.updateBackground(),
                 this.element
                   .find(
@@ -23655,12 +23659,14 @@
                 r = this.element.find('.tpd-frame-' + this._side),
                 o = this._vars.frames[n].dimensions;
               r.css(o),
-                r.find('.tpd-backgrounds').css(
-                  $.extend({}, i.background.position, {
-                    width: o.width - i.background.position.left,
-                    height: o.height - i.background.position.top
-                  })
-                );
+                r
+                  .find('.tpd-backgrounds')
+                  .css(
+                    $.extend({}, i.background.position, {
+                      width: o.width - i.background.position.left,
+                      height: o.height - i.background.position.top
+                    })
+                  );
               var a = Position.getOrientation(n);
               if (this.tooltip.options.stem)
                 if (
@@ -23695,10 +23701,12 @@
                       )
                       .hide(),
                     'right' == n
-                      ? r.find('.tpd-background-box-left').css({
-                          width:
-                            i.dimensions.width - i.stemPx - this._css.border
-                        })
+                      ? r
+                          .find('.tpd-background-box-left')
+                          .css({
+                            width:
+                              i.dimensions.width - i.stemPx - this._css.border
+                          })
                       : r
                           .find('.tpd-background-box-right')
                           .css({ 'margin-left': this._css.border })
@@ -23738,10 +23746,12 @@
                       )
                       .hide(),
                     'bottom' == n
-                      ? r.find('.tpd-background-box-top').css({
-                          height:
-                            i.dimensions.height - i.stemPx - this._css.border
-                        })
+                      ? r
+                          .find('.tpd-background-box-top')
+                          .css({
+                            height:
+                              i.dimensions.height - i.stemPx - this._css.border
+                          })
                       : r
                           .find('.tpd-background-box-bottom')
                           .css({ 'margin-top': this._css.border })
@@ -24053,10 +24063,12 @@
                 n = this._m,
                 i = Position.getSide(this._position);
               if (
-                (this.element.find('.tpd-stem-spacer').css({
-                  width: f ? t.inside.height : t.inside.width,
-                  height: f ? t.inside.width : t.inside.height
-                }),
+                (this.element
+                  .find('.tpd-stem-spacer')
+                  .css({
+                    width: f ? t.inside.height : t.inside.width,
+                    height: f ? t.inside.width : t.inside.height
+                  }),
                 'top' == i || 'left' == i)
               ) {
                 var r = {};
@@ -31852,8 +31864,8 @@
             return (
               !1 !== i(e) &&
               'function' === typeof (t = e.constructor) &&
-              ((n = t.prototype),
-              !1 !== i(n) && !1 !== n.hasOwnProperty('isPrototypeOf'))
+                ((n = t.prototype),
+                !1 !== i(n) && !1 !== n.hasOwnProperty('isPrototypeOf'))
             );
           },
           q = function(e) {
@@ -34922,8 +34934,7 @@
       }
       return (
         !!i[typeof Symbol.iterator] &&
-        !!i[typeof Symbol.toPrimitive] &&
-        !!i[typeof Symbol.toStringTag]
+        !!i[typeof Symbol.toPrimitive] && !!i[typeof Symbol.toStringTag]
       );
     };
   },
@@ -35248,8 +35259,7 @@
     e.exports = function() {
       return (
         'function' === typeof i.contains &&
-        !0 === i.contains('dwa') &&
-        !1 === i.contains('foo')
+        !0 === i.contains('dwa') && !1 === i.contains('foo')
       );
     };
   },
@@ -35276,7 +35286,7 @@
         ('symbol' === typeof e ||
           (!!e.constructor &&
             'Symbol' === e.constructor.name &&
-            'Symbol' === e[e.constructor.toStringTag]))
+              'Symbol' === e[e.constructor.toStringTag]))
       );
     };
   },
@@ -39975,8 +39985,8 @@
         ? 0 === r.type
         : !i &&
           2 < t.length &&
-          ('o' === t[0] || 'O' === t[0]) &&
-          ('n' === t[1] || 'N' === t[1])) ||
+            ('o' === t[0] || 'O' === t[0]) &&
+            ('n' === t[1] || 'N' === t[1])) ||
         (re(t, n, r, i) && (n = null),
         i || null === r
           ? ne(t) &&
@@ -41120,8 +41130,7 @@
           ? e.shouldComponentUpdate(i, o, a)
           : !t.prototype ||
             !t.prototype.isPureReactComponent ||
-            !Pe(n, i) ||
-            !Pe(r, o)
+            !Pe(n, i) || !Pe(r, o)
       );
     }
     function Yt(e, t, n) {
@@ -49497,7 +49506,7 @@
               (this.isFullScreenAvailable =
                 !__WEBPACK_IMPORTED_MODULE_12__constants_config__.a.isIOS &&
                 !!__WEBPACK_IMPORTED_MODULE_2_screenfull___default.a &&
-                !!__WEBPACK_IMPORTED_MODULE_2_screenfull___default.a.enabled),
+                  !!__WEBPACK_IMPORTED_MODULE_2_screenfull___default.a.enabled),
               (this.idSlideByParams = !1),
               (this.disableFullScreen = !1),
               (this.backgroundAudioStore = null),
@@ -96293,9 +96302,7 @@
           i = e.Position.PositionTop.replace('px', '');
         return (
           n <= -1 * e.Width ||
-          n >= t.width ||
-          i <= -1 * e.Height ||
-          i >= t.height
+          n >= t.width || i <= -1 * e.Height || i >= t.height
         );
       },
       r = function(e) {
