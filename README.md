@@ -1,3 +1,13 @@
 # genially
 
-Build the app with `yarn build`
+## Setup
+
+```
+yarn
+```
+
+## Distribute
+
+```
+yarn dist
+```
